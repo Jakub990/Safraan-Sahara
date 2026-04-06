@@ -1,0 +1,460 @@
+:root {
+    --background: #FFF7E4;
+    --text: #000;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 97vh;
+}
+
+body.donker-modus {
+    --background: #2c2c2c;
+    --text: #f1f1f1;
+}
+
+.focus-button:focus {
+    outline: 3px solid orange;
+    outline-offset: 4px;
+}
+
+.main-menu {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER */
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.figure-logo-home img {
+    max-width: 120px;
+}
+
+/* HAMBURGER */
+
+.label-hamburger-home {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.label-hamburger-home span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    margin: 5px 0;
+}
+
+
+.nav-header {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    flex-direction: column;
+}
+
+
+.nav-header.toon-menu {
+    display: flex;
+}
+
+.nav-header a {
+    padding: 15px;
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    grid-area: footer;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Viggo */
+.main-reserveren {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.reservatie-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    padding-bottom: 25px;
+    border: 2px solid var(--text);
+    border-radius: 8px;
+    margin-top: 15px;
+
+}
+
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.active {
+    background: #333;
+}
+
+.img-bezorging {
+    display: none;
+}
+
+.slide-home {
+    grid-area: slide;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-slide {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.main-tijden {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "locatie"
+        "tijden"
+        "status";
+    padding: 20px;
+}
+
+.status {
+    grid-area: status;
+    text-align: center;
+    padding: 5px;
+}
+
+.locatie {
+    grid-area: locatie;
+    text-align: center;
+    padding: 5px;
+}
+
+.locatie-info {
+    text-align: center;
+    padding: 5px;
+}
+
+.img-locatie>img {
+    max-width: auto;
+    height: 30vh;
+}
+
+.tijden {
+    grid-area: tijden;
+    text-align: center;
+    padding: 5px;
+}
+
+/* MENU Jakub */
+
+body.hoog-contrast {
+    --background: yellow;
+    --text: #000000;
+}
+
+.focus-button:focus {
+    outline: 3px solid orange;
+    outline-offset: 4px;
+
+}
+
+.focus-button {
+    margin: 2px;
+    color: var(--text);
+    background-color: transparent;
+
+}
+
+.main-menu {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-options {
+
+    font-size: 12px;
+}
+
+.menu-Options {
+    margin: 2px;
+    color: var(--text);
+    background-color: transparent;
+    max-width: 200px;
+    max-height: 30px;
+}
+
+.menu-Options.terug-naar-boven {
+    align-self: center;
+    margin: 20px auto 0;
+}
+
+.cooleBox {
+    border: #000 solid 1px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#cooleBoxWarning {
+    border: #000 solid 1px;
+    margin-top: 15px;
+    text-align: center;
+    background-color: #ffcccc;
+}
+
+.gerecht-beschrijving {
+    font-size: 14px;
+
+}
+
+/* vacatures jakub */
+#vaca1 {
+    border: lightcoral solid 3px;
+    padding: 10px;
+    margin: 5px auto 0;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#vaca2 {
+    border: #000 solid 3px;
+    padding: 10px;
+    margin: 5px auto 0;
+    width: 210px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#vaca3 {
+    border: lightblue solid 3px;
+    padding: 10px;
+    margin: 5px auto 0;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.vacatureFoto {
+    width: 150px;
+}
+
+.soli-Btn {
+    margin: 5px;
+    color: var(--text);
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* DESKTOP */
+
+@media (min-width:768px) {
+
+    .main-tijden {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "locatie tijden"
+            "locatie status";
+        gap: 40px;
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    .locatie {
+        grid-area: locatie;
+        text-align: center;
+    }
+
+    .locatie-info {
+        margin-bottom: 20px;
+    }
+
+    .img-locatie img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .tijden {
+        grid-area: tijden;
+        text-align: center;
+    }
+
+    .status {
+        grid-area: status;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #message {
+        color: green;
+        font-weight: bold;
+    }
+
+    .main-home {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "intro slide specialiteiten"
+            "bezorging bezorging .";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .intro-home {
+        grid-area: intro;
+    }
+
+    .specialiteiten-home {
+        grid-area: specialiteiten;
+    }
+
+    .slide-home {
+        grid-area: slide;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-slide {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .bezorging-home {
+        grid-area: bezorging;
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .bezorging-tekst {
+        flex: 1;
+    }
+
+    .img-bezorging {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    .img-bezorging img {
+        height: 100px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        margin: 10px 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .label-hamburger-home {
+        display: none;
+    }
+
+    .nav-header {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .nav-header a {
+        border: none;
+        padding: 0 15px;
+    }
+
+    .gerechtGrid {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .gerecht {
+        border: #000 solid 1px;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    #vaca-Grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+}
